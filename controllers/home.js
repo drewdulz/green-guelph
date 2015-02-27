@@ -30,7 +30,9 @@ if (Meteor.isClient) {
 
   Template.itemSearch.events({
   	'click #item': function () {
+      console.log(this);
       showMore(this);
+
     }
   });
 
