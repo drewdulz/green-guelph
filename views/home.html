@@ -1,13 +1,21 @@
 <template name="home">
 	<h1>Home</h1>
 	{{> itemSearch}}
+	{{> itemDetails}}
 </template>
 
 <template name="itemSearch">
   {{> esInput index="wasteitems" placeholder="Search..." }}
   <ul>
       {{#esEach index="wasteitems"}}
-          <li>Item Name: {{item_name}}, Collection Type: {{binName collection_code}}, Collection Notes: {{collection_notes}} </li>
+          <li id="item">Item Name: {{item_name}}, Collection Type: {{binName collection_code}}, Collection Notes: {{item_collection_notes}} </li>
       {{/esEach}}
   </ul>
+</template>
+
+<template name="itemDetails">
+	<div id="current-item-details">
+		<!-- Some table or something -->
+		{{currentItemName}},{{currentItemBin}}, {{currentItemNotes}}, {{iconHTML}}
+	</div>
 </template>

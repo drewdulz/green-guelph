@@ -4,6 +4,7 @@
 	{{#if currentUser}}
 	  {{> accountOptions}}
 	  {{> input}}
+	  {{> removeItem}}
 		<br>
 		{{> upload}}
 	{{else}}
@@ -43,6 +44,15 @@
 
 <template name="accountOptions">
 	<button id="logout">logout</button>
+</template>
+
+<template name="removeItem">
+  {{> esInput index="wasteitems" placeholder="Search..." }}
+  <ul>
+      {{#esEach index="wasteitems"}}
+          <li>Item Name: {{item_name}}, Item Code: {{item_code}} Collection Notes: {{item_collection_notes}} <button id="remove">Remove</button> </li>
+      {{/esEach}}
+  </ul>
 </template>
 
 
