@@ -1,14 +1,20 @@
 //Routing
 Router.route('/', function () {
   this.render('home');
+  $(".navbar-nav").children().removeClass("active");
+  $("#home").addClass("active");
 });
 
 Router.route('/admin', function () {
   this.render('admin');
+  $(".navbar-nav").children().removeClass("active");
+  $("#admin").addClass("active");
 });
 
 Router.route('/info', function () {
   this.render('info');
+  $(".navbar-nav").children().removeClass("active");
+  $("#info").addClass("active");
 });
 
 //DB initialization
@@ -25,6 +31,9 @@ if (Meteor.isClient) {
             Router.go('/admin');
       }
   });
+
+
+
   
 }
 

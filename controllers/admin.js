@@ -45,5 +45,12 @@ if (Meteor.isClient) {
     }
   });
 
+  Template.removeItem.events({
+    'click #remove': function () {
+      WasteItems.remove(this._id);
+    }
+  });
+
 
 }
+
