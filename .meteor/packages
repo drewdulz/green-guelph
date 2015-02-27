@@ -8,3 +8,10 @@ meteor-platform
 autopublish
 insecure
 iron:router
+mrt:jquery-csv
+accounts-password
+
+matteodem:easy-search
+accounts-base
+twbs:bootstrap
+useraccounts:bootstrap

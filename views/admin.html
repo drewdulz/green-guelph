@@ -1,0 +1,58 @@
+<template name="admin">
+	<!-- {{> loginButtons}} -->
+	<h1>Admin Panel</h1>
+	{{#if currentUser}}
+	  {{> accountOptions}}
+	  {{> input}}
+	  {{> removeItem}}
+		<br>
+		{{> upload}}
+	{{else}}
+		{{> atForm}}
+	{{/if}}
+</template>
+
+
+<template name="input">
+	<label>Item Name: </label>
+	<input id="item_name"/>
+	<label>Collection Code: </label>
+	<input id="collection_code"/>
+	<label>Item Code: </label>
+	<input id="item_code"/>
+	<label>Collection Notes: </label>
+	<input id="collection_notes"/>
+	<label>Material Code </label>
+	<input id="material_code"/>
+	<button id="submit">Submit</button>
+</template>
+
+<template name="upload">
+  <input type="file" id="files" name="files[]" multiple />
+  <output id="list"></output>
+</template>
+
+<template name="login">
+	<form id="login-form" action="action">
+    <div>
+      <input type="email" id="login-email" />
+      <input type="password" id="login-password" />
+      <input type="submit" id="login-button" value="Sign in" />
+   </div>
+ </form> 
+</template>
+
+<template name="accountOptions">
+	<button id="logout">logout</button>
+</template>
+
+<template name="removeItem">
+  {{> esInput index="wasteitems" placeholder="Search..." }}
+  <ul>
+      {{#esEach index="wasteitems"}}
+          <li>Item Name: {{item_name}}, Item Code: {{item_code}} Collection Notes: {{item_collection_notes}} <button id="remove">Remove</button> </li>
+      {{/esEach}}
+  </ul>
+</template>
+
+
