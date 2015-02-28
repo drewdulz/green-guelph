@@ -32,8 +32,8 @@ if (Meteor.isClient) {
   	'click #item': function () {
       console.log(this);
       showMore(this);
+    },
 
-    }
   });
 
 
@@ -44,8 +44,8 @@ var showMore = function(item) {
 	Session.set("currentItemBin", binName(item.collection_code));
 	Session.set("currentItemNotes", item.item_collection_notes);
 	Session.set("iconHTML", getIconHTML(item.collection_code));
-
 	$('#current-item-details').show();
+  $('#resultsRow').hide();
 }
 
 var binName = function(bin) {
@@ -55,14 +55,4 @@ var binName = function(bin) {
 var getIconHTML = function(bin) {
 	return icons[bin];
 }
-
-
-
-
-
-
-
-
-
-
 
