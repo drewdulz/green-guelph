@@ -55,3 +55,14 @@ var binName = function(bin) {
 var getIconHTML = function(bin) {
 	return icons[bin];
 }
+
+
+
+
+
+
+
+
+
+
+

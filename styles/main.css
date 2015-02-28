@@ -85,6 +85,10 @@ button{
 
 }
 
+.searchRow{
+	margin-top: 20px;
+}
+
 #popupsuccess{
 	margin-top: 20px;
 	display: none;
