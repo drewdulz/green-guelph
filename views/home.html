@@ -17,6 +17,9 @@
 				</form>	
 			</div>
 		</div>
+		{{#ifEsInputIsEmpty index="wasteitems"}}
+		<!-- Content for goes here for when search bar is empty -->
+		{{else}}
 		<div class="row resultsRow" id="resultsRow">
 			<div class="col-md-6 col-md-offset-3 coloredBackground">
 				<!-- <h3>Your item's name</h3> -->
@@ -34,9 +37,20 @@
 							{{/esEach}}
 						</table>
 				</div>
+				{{#ifEsHasNoResults index="wasteitems"}}
+		      <div class="no-results">No results found!</div>
+		    {{/ifEsHasNoResults}}
+
+	     	{{#ifEsIsSearching index="wasteitems"}}
+	      	<div>Loading...</div>
+	    	{{/ifEsIsSearching}}
 			</div>
 		</div>
-	</div>	
+	
+		{{/ifEsInputIsEmpty}}
+	</div>
+
+
 </template>
 
 <template name="itemDetails">
