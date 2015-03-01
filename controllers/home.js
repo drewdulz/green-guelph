@@ -44,8 +44,8 @@ var showMore = function(item) {
 	Session.set("currentItemBin", binName(item.collection_code));
 	Session.set("currentItemNotes", item.item_collection_notes);
 	Session.set("iconHTML", getIconHTML(item.collection_code));
-	$('#current-item-details').show();
-  $('#resultsRow').hide();
+	$('#current-item-details').show(); //Show modal
+  $('#resultsRow').hide(); //Won't need this
 }
 
 var binName = function(bin) {
