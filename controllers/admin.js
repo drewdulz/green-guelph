@@ -18,6 +18,7 @@ if (Meteor.isClient) {
             });
           }
           reader.readAsText(file);
+          alert("CSV Uploaded");
         }
       }
     }

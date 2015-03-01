@@ -5,7 +5,7 @@
 html, body{
 	height:100%;
 	width: 100%;
-	background-color: black;
+	/*background-color: black;*/
 }
 
 td{
@@ -29,15 +29,27 @@ input{
 	color: #58FA58;
 }
 
+/*input[placeholder] {
+   font-weight: bold;
+   border-color: blue;
+   color: blue;
+}*/
+
+.pointer { 
+	cursor: pointer; cursor: hand;
+	color: rgba(0, 0, 255, 0.3);
+ }
+
 .searchbar{
 	border-radius: 45px;
-	width:140%;
+	min-width: 10em;
 	/*height: 100%;*/
 	/*font-size: 150%;*/
-	color: green;
+	color: rgba(0, 0, 255, 0.3);
+	/*margin-left: 80px;*/
 
 	padding:8px 15px;
-    background:rgba(50, 50, 50, 0.2);
+    background-color: rgba(0, 255, 0, 0.3);
     border:0px solid #dbdbdb;
 }
 
@@ -88,7 +100,7 @@ button{
 }
 
 .searchRow{
-	margin-top: 20px;
+	margin-top: 0px;
 }
 
 #popupsuccess{
