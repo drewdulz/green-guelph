@@ -26,13 +26,15 @@ input{
 	margin-top: 10px;
 	display: block;
 	visibility: default;
+	color: #58FA58;
 }
 
 .searchbar{
-	/*border-radius: 45px;*/
-	/*width:100%;*/
+	border-radius: 45px;
+	width:140%;
 	/*height: 100%;*/
 	/*font-size: 150%;*/
+	color: green;
 
 	padding:8px 15px;
     background:rgba(50, 50, 50, 0.2);
@@ -60,7 +62,7 @@ input{
 
 .container{
 
-	background-image: url("/background3.jpg");
+	background-image: url("/background4.jpg");
 	width: 100%;
 	height:100%;
 	background-size: cover;
@@ -72,7 +74,7 @@ input{
 }
 
 .white{
-	color: #000;
+	color: #58FA58;
 }
 
 p{
@@ -107,7 +109,7 @@ button{
 	background-color: white;
 	border-radius: 20px;
 	padding: 20px;
-	opacity: 0.8;
+	/*opacity: 0.8;*/
 	font-weight: bold;
 }
 
