@@ -35,8 +35,6 @@ if (Meteor.isClient) {
     },
 
   });
-
-
 }
 
 var showMore = function(item) {
