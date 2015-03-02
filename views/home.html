@@ -29,6 +29,7 @@
 								<tr>
 									<th><h4>Item Name</h4></th>
 									<th><h4>Collection Type</h4></th>
+			
 								</tr>
 							</thead>
 							<tbody>	
@@ -36,13 +37,15 @@
 								<tr id="item" class="pointer">
 									<td>{{item_name}}</td>
 									<td>{{binName collection_code}}</td>
+					
 								</tr>	
 								{{/esEach}}
 							</tbody>	
 						</table>
 				</div>
 				{{#ifEsHasNoResults index="wasteitems"}}
-		      <div class="no-results">Don't see your item? <a href="">Request it!</a></div>
+		      <div class="no-results">Don't see your item? <a href="mailto:drewdulz@gmail.com?subject=Item Request
+&body=Please include the following item in the GreenGuelph app: PLEASE ENTER THE NAME OF THE ITEM. Item: ">Request it!</a></div>
 		    {{/ifEsHasNoResults}}
 
 	     	{{#ifEsIsSearching index="wasteitems"}}
@@ -76,6 +79,7 @@
 					<tr>
 						<th><h4>Item Name</h4></th>
 						<th><h4>Collection Type</h4></th>
+						<!-- <th></th> -->
 						
 					</tr>
 				</thead>
@@ -83,6 +87,8 @@
 					<tr class="modalItems">
 						<td>{{currentItemName}}</td>
 						<td>{{currentItemBin}}</td>
+						<!-- <td>{{iconHTML}}</td> -->
+						<!-- <td>{{iconHTML}}</td> -->
 						
 					</tr>
 				</tbody>	

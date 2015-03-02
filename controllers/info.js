@@ -7,38 +7,35 @@ var info = [
 		notes: "Organic waste is picked up via curbside collection",
 		anchor: "organic",
 		image: "/organic.png",
-
+		bgcolor: "#84D545"
 	}, 
 	{
 		name: "Recycling",
 		notes: "Recycling is picked up via curbside collection",
 		anchor: "recycle",
-
-		image: "/triangular42.png"
-
+		image: "/triangular42.png",
+		bgcolor: "#5777E9"
 	},
 	{
 		name: "Landfill",
 		notes: "Landfill waste is picked up via curbside collection",
 		anchor: "landfill",
-
-		image: "/waste.png"
-
+		image: "/waste.png",
+		bgcolor: "#819099"
 	},
 	{
 		name: "Sharp Objects",
 		notes: "Sharp objects should be placed with landfill waste to be picked up via curbside collection",
 		anchor: "sharp",
-
-		image: "/needle3.png"
-
+		image: "/needle3.png",
+		bgcolor: "#FF3E6C"
 	},
 	{
 		name: "Hazardous Waste",
 		notes: "HHW Depot does NOT accept waste that is unidentified, radioactive, contains PCBs, ammunitions or explosives or classified as industrial, commercial or institutional.",
 		anchor: "hazardous",
-
-		image: "/hazard.png"
+		image: "/hazard.png",
+		bgcolor: "#FF581F"
 	},
 	{
 		name: "Bulky Items",
@@ -93,6 +90,5 @@ if (Meteor.isClient) {
 	}
 
 }
-
 
 

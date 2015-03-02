@@ -1,0 +1,38 @@
+<template name="info">
+  <div class="container-fluid info-super-container">
+    <div class="info-title">Choose a Category to Learn More:</div>
+    {{> infoCategories}}
+      {{#each info}}
+        <div class="row" id="{{this.anchor}}" name="{{this.anchor}}">
+          <div class="col-xs-12 col-sm-4 col-md-4 content-row">
+            <!-- <img src="{{this.image}}" class="category-bg-image"> -->
+            <div class="photo" style="background-image: url('{{this.image}}'); background-color: {{this.bgcolor}};">{{this.name}}</div>
+          </div>
+          <div class="col-xs-12 col-sm-8 col-md-8 content-row">
+            <div class="info" style="background-color: {{this.bgcolor}};">{{this.notes}}</div>
+          </div>
+        </div>
+      {{/each}}
+  </div>
+
+
+
+</template>
+
+<template name="infoCategories">
+  <div class="info-container">
+    <div class="row">
+    {{#each info}}
+        <a href="#{{this.anchor}}">
+      <div class="col-xs-6 col-md-3 info-items" align="center">
+        <!-- <a href="localhost:3000/info#landfill"> -->
+          <div class="category img-zoom" style="background-image: url('{{this.image}}'); background-color: {{this.bgcolor}};">
+            <div class="category-name">{{this.name}}</div>
+          </div>
+      </div>
+        </a>
+
+    {{/each}}
+    </div>
+  </div>
+</template>

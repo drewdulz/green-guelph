@@ -8,7 +8,7 @@ html, body{
 	height:100%;
 	width: 100%;
 
-	overflow: scroll;
+	/*overflow: scroll;*/
 
 	padding-top: 25px;
 
@@ -43,6 +43,11 @@ input{
 
 .navbar-default .navbar-nav > li > a {
 	color:  #2FE722;
+}
+
+.icon-img {
+	height: 20px;
+	width: auto;
 }
 
 .glyphicon-leaf{
