@@ -18,6 +18,7 @@ if (Meteor.isClient) {
             });
           }
           reader.readAsText(file);
+          alert("CSV has been Uploaded");
         }
       }
     }
@@ -35,6 +36,7 @@ if (Meteor.isClient) {
       }
       console.log(item);
       WasteItems.insert(item);
+      alert("Item has been added to the Database")
 
     }
   });
@@ -48,6 +50,7 @@ if (Meteor.isClient) {
   Template.removeItem.events({
     'click #remove': function () {
       WasteItems.remove(this._id);
+      alert("item removed");
     }
   });
 

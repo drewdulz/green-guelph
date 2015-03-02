@@ -4,41 +4,108 @@
 </template>
 
 <template name="itemSearch">
-	<div class="row searchRow">
-		<div class=" col-md-6 col-md-offset-3 center coloredBackground">
-			<h1 class="center white ">Want to recycle wut?</h1>
-			<form class="form-inline">
-				<div class="form-group center">
-						{{> esInput index="wasteitems" class="form-control searchbar input-lg" placeholder="Search..." }}
-						<button class="btn btn-info btn-lg" id="button">Search</button>
-				</div>
-			</form>	
-		</div>
-	</div>
-	<div class="row resultsRow" id="resultsRow">
-		<div class="col-md-6 col-md-offset-3 coloredBackground">
-			<h3>Your item's name</h3>
-			<div class="table-responsive">
-					<table class="table table-striped">
-						<tr>
-							<th><h4>Item Name</h4></th>
-							<th><h4>Collection Type</h4></th>
-						</tr>
-						{{#esEach index="wasteitems" }}
-						<tr id="item">
-							<td>{{item_name}}</td>
-							<td>{{binName collection_code}}</td>
-						</tr>	
-						{{/esEach}}
-					</table>
+	<div class="container">
+		<div class="row searchRow">
+			<div class=" col-md-6 col-md-offset-3 center coloredBackground">
+				<h1 class="center white ">What Item would you like to recycle?</h1>
+				<form class="form">
+					<div class="form-group center">
+						<span class="glyphicons glyphicons-search"></span>
+							{{> esInput index="wasteitems" class="form-control searchbar input-lg" placeholder="Search..." }}
+							<!-- <button class="btn btn-info btn-lg" id="button">Search</button> -->
+					</div>
+				</form>	
 			</div>
 		</div>
+		{{#ifEsInputIsEmpty index="wasteitems"}}
+		<!-- Content for goes here for when search bar is empty -->
+		{{else}}
+		<div class="row resultsRow" id="resultsRow">
+			<div class="col-md-6 col-md-offset-3 coloredBackground">
+				<!-- <h3>Your item's name</h3> -->
+				<div class="table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th><h4>Item Name</h4></th>
+									<th><h4>Collection Type</h4></th>
+			
+								</tr>
+							</thead>
+							<tbody>	
+								{{#esEach index="wasteitems" }}
+								<tr id="item" class="pointer">
+									<td>{{item_name}}</td>
+									<td>{{binName collection_code}}</td>
+					
+								</tr>	
+								{{/esEach}}
+							</tbody>	
+						</table>
+				</div>
+				{{#ifEsHasNoResults index="wasteitems"}}
+		      <div class="no-results">Don't see your item? <a href="mailto:drewdulz@gmail.com?subject=Item Request
+&body=Please include the following item in the GreenGuelph app: PLEASE ENTER THE NAME OF THE ITEM. Item: ">Request it!</a></div>
+		    {{/ifEsHasNoResults}}
+
+	     	{{#ifEsIsSearching index="wasteitems"}}
+	      	<div>Loading...</div>
+	    	{{/ifEsIsSearching}}
+			</div>
+		</div>
+	
+		{{/ifEsInputIsEmpty}}
 	</div>
+
+
+
 </template>
 
 <template name="itemDetails">
-	<div id="current-item-details" class="white-text">
+	<!-- Modal -->
+<div class="modal fade" id="moreModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title center" id="myModalLabel">Item Details</h4>
+      </div>
+      <div class="modal-body">
+        <!-- <div id="current-item-details" class="white-text"> -->
 		<!-- Some table or something -->
-		{{currentItemName}},{{currentItemBin}}, {{currentItemNotes}}, {{iconHTML}}
-	</div>
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th><h4>Item Name</h4></th>
+						<th><h4>Collection Type</h4></th>
+						<!-- <th></th> -->
+						
+					</tr>
+				</thead>
+				<tbody>	
+					<tr class="modalItems">
+						<td>{{currentItemName}}</td>
+						<td>{{currentItemBin}}</td>
+						<!-- <td>{{iconHTML}}</td> -->
+						<!-- <td>{{iconHTML}}</td> -->
+						
+					</tr>
+				</tbody>	
+			</table>
+			<h4>Collection Notes</h4>
+			<div>
+				{{currentItemNotes}}
+			</div>	
+		</div>
+		<!-- ,, , {{iconHTML}} -->
+	<!-- </div> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
 </template>

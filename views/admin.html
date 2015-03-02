@@ -1,6 +1,4 @@
 <template name="admin">
-	<!-- {{> loginButtons}} -->
-	<h1>Admin Panel</h1>
 	{{#if currentUser}}
 	  {{> accountOptions}}
 	  {{> input}}
@@ -14,26 +12,49 @@
 
 
 <template name="input">
-	<label>Item Name: </label>
-	<input id="item_name"/>
-	<label>Collection Code: </label>
-	<input id="collection_code"/>
-	<label>Item Code: </label>
-	<input id="item_code"/>
-	<label>Collection Notes: </label>
-	<input id="collection_notes"/>
-	<label>Material Code </label>
-	<input id="material_code"/>
-	<button id="submit">Submit</button>
+	<h2 class="form-title">Add an item to the database:</h2>
+	<form>
+	  <div class="form-group">
+	    <label for="item_name">Item Name:</label>
+	    <input type="text" class="form-control" id="item_name" placeholder="Enter email">
+	  </div>
+	  <div class="form-group">
+	    <label for="collection_code">Collection Code:</label>
+	    <input type="text" class="form-control" id="collection_code" placeholder="Enter email">
+	  </div>
+	  <div class="form-group">
+	    <label for="item_code">Item Code:</label>
+	    <input type="text" class="form-control" id="item_code" placeholder="Enter email">
+	  </div>
+	  <div class="form-group">
+	    <label for="collection_notes">Collection Notes:</label>
+	    <input type="text" class="form-control" id="collection_notes" placeholder="Enter email">
+	  </div>
+	  <div class="form-group">
+	    <label for="material_code">Material Code</label>
+	    <input type="text" class="form-control" id="material_code" placeholder="Enter email">
+	  </div>
+
+	  <button type="submit" id="submit" class="btn btn-default">Submit</button>
+	</form>
+
 </template>
 
 <template name="upload">
-  <input type="file" id="files" name="files[]" multiple />
-  <output id="list"></output>
+	<h2 class="form-title">Upload a CSV to the database:</h2>
+	<form>
+	  <div class="form-group">
+	    <input type="file" id="files" name="files[]" multiple />
+	  	<output id="list"></output>
+	  </div>
+
+	</form>
+
+
 </template>
 
 <template name="login">
-	<form id="login-form" action="action">
+	<form id="login-form" action="action" class="login-form">
     <div>
       <input type="email" id="login-email" />
       <input type="password" id="login-password" />
@@ -43,16 +64,26 @@
 </template>
 
 <template name="accountOptions">
-	<button id="logout">logout</button>
+	<button id="logout" class="logout-btn">logout</button>
 </template>
 
 <template name="removeItem">
-  {{> esInput index="wasteitems" placeholder="Search..." }}
-  <ul>
-      {{#esEach index="wasteitems"}}
-          <li>Item Name: {{item_name}}, Item Code: {{item_code}} Collection Notes: {{item_collection_notes}} <button id="remove">Remove</button> </li>
-      {{/esEach}}
-  </ul>
+	<h2 class="form-title">Remove items from the database:</h2>
+	<form>
+	  <div class="form-group">
+	   	{{> esInput index="wasteitems" class="remove-item" placeholder="Search for the item you want to remove" }}
+		  <ul>
+		      {{#esEach index="wasteitems"}}
+		          <li>Item Name: {{item_name}}, Item Code: {{item_code}} <button id="remove">Remove</button> </li>
+		      {{/esEach}}
+		  </ul>
+	  </div>
+
+	</form>
+
+
+
+  
 </template>
 
 
