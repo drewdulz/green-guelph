@@ -3,8 +3,7 @@
     <div class="info-title">Choose a Category to Learn More:</div>
     {{> infoCategories}}
       {{#each info}}
-      	<div class="row">
-          <a name="{{this.anchor}}" id="{{this.anchor}}"></a>
+      	<div class="row" id="{{this.anchor}}" name="{{this.anchor}}">
         	<div class="col-xs-12 col-sm-4 col-md-4 content-row">
         		<!-- <img src="{{this.image}}" class="category-bg-image"> -->
             <div class="photo" style="background-image: url('{{this.image}}'); background-color: {{this.bgcolor}};">{{this.name}}</div>
@@ -24,14 +23,14 @@
   <div class="info-container">
     <div class="row">
     {{#each info}}
-      <div  class="col-xs-6 col-md-3 info-items" align="center">
+        <a href="#{{this.anchor}}">
+      <div class="col-xs-6 col-md-3 info-items" align="center">
         <!-- <a href="localhost:3000/info#landfill"> -->
-        <a href="#{{this.anchor}}" id="reload">
           <div class="category img-zoom" style="background-image: url('{{this.image}}'); background-color: {{this.bgcolor}};">
             <div class="category-name">{{this.name}}</div>
           </div>
-        </a>
       </div>
+        </a>
 
     {{/each}}
     </div>

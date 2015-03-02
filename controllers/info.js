@@ -76,13 +76,7 @@ if (Meteor.isClient) {
     },
   });
 
-  Template.infoCategories.events({
-    // 'click #reload': function () {
-    // 	var id = $(this)attr('id'));
-  		// alert(id);
-    //   window.location.href=window.location.href;
-    // },
-  });
+
 
   Template.infoCategories.rendered = function(){
   	Session.set("info", info);
