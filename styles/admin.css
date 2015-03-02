@@ -1,0 +1,22 @@
+.form-title {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.logout-btn {
+	position: absolute;
+	top: 25px;
+	right: 0px;
+}
+
+.center {
+	text-align: center;
+}
+.remove-item {
+	width: 100%;
+}
+
+.at-form {
+	text-align: center;
+	width: 50%;
+}
