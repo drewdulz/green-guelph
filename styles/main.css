@@ -22,7 +22,31 @@ form {
 
 input{
 	display: inline;
+}
+
+.mynav{
+	/*background-color: rgba(0, 0, 255, 0.3);*/
+
 } 
+
+.navbar-default .navbar-brand {
+	color: #2FE722;
+	padding: 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color:  #2FE722;
+}
+
+.glyphicon-leaf{
+	margin-right: 8px;
+}
+
+.navbar-brand{
+	font-size: 1.8em;
+	color: rgba(0, 255, 0, 0.3);
+	/*padding-bottom: 20px;*/
+}
 
 #resultsRow{
 	margin-top: 10px;
@@ -37,17 +61,25 @@ input{
    color: blue;
 }*/
 
+#moreModal{
+
+	background-color: rgba(0, 0, 255, 0.3);
+
+}
+
+
+
 .pointer { 
 	cursor: pointer; cursor: hand;
-	color: rgba(0, 0, 255, 0.3);
+	color: rgba(100, 144, 163, 1);
  }
 
 .searchbar{
-	border-radius: 45px;
-	min-width: 10em;
+	border-radius: 8px;
+	/*min-width: 10em;*/
 	/*height: 100%;*/
 	/*font-size: 150%;*/
-	color: rgba(0, 0, 255, 0.3);
+	color: rgba(100, 144, 163, 1);
 	/*margin-left: 80px;*/
 
 	padding:8px 15px;
