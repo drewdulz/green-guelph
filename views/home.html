@@ -65,12 +65,34 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        <h4 class="modal-title center" id="myModalLabel">Item Details</h4>
       </div>
       <div class="modal-body">
         <!-- <div id="current-item-details" class="white-text"> -->
 		<!-- Some table or something -->
-		{{currentItemName}},{{currentItemBin}}, {{currentItemNotes}}, {{iconHTML}}
+		<div class="table-responsive">
+			<table class="table">
+				<thead>
+					<tr>
+						<th><h4>Item Name</h4></th>
+						<th><h4>Collection Type</h4></th>
+						
+					</tr>
+				</thead>
+				<tbody>	
+					<tr class="modalItems">
+						<td>{{currentItemName}}</td>
+						<td>{{currentItemBin}}</td>
+						
+					</tr>
+				</tbody>	
+			</table>
+			<h4>Collection Notes</h4>
+			<div>
+				{{currentItemNotes}}
+			</div>	
+		</div>
+		<!-- ,, , {{iconHTML}} -->
 	<!-- </div> -->
       </div>
       <div class="modal-footer">
