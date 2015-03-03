@@ -82,6 +82,7 @@
   border-width: 5px;
   display: table-cell;
   vertical-align: middle;
+  font-weight: bold;
 }
 
 .content-row {
