@@ -120,7 +120,7 @@ input{
 	background-size: cover;
 	background-position: center;
 	padding-top: 150px;
-	overflow: scroll;
+	/*overflow: scroll;*/
 	padding-bottom: 70px;
 }
 .center{
@@ -169,4 +169,19 @@ button{
 
 .white-text {
 	color: white;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .searchbar{
+  	max-width: 90vw;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+	.searchbar {
+		max-width: 46vw;
+	}
+
 }
