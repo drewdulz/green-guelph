@@ -86,7 +86,8 @@ input{
 	/*min-width: 10em;*/
 	/*height: 100%;*/
 	/*font-size: 150%;*/
-	color: rgba(100, 144, 163, 1);
+	/*color: rgba(100, 144, 163, 1);*/
+	color: black;
 	/*margin-left: 80px;*/
 
 	padding:8px 15px;
