@@ -17,6 +17,16 @@ Router.route('/info', function () {
   $("#info").addClass("active");
 });
 
+// Router.configure({
+//  layoutTemplate: 'layout',
+// });
+
+
+// Router.configure({
+//   layoutTemplate: 'layout',
+//    notFoundTemplate: 'notFound',
+//  });
+
 //DB initialization
 WasteItems = new Mongo.Collection("wasteitems");
 var items = WasteItems.find();
@@ -30,6 +40,12 @@ if (Meteor.isClient) {
           if (user)
             Router.go('/admin');
       }
+  });
+
+  Template.logout.events({
+    'click #logout' : function() {
+      Meteor.logout();
+    }
   });
 
 
@@ -54,7 +70,7 @@ if (Meteor.isServer) {
 AccountsTemplates.configure({
     forbidClientAccountCreation: false,
     sendVerificationEmail: true,
-    enforceEmailVerification: true,
+    // enforceEmailVerification: true,
     continuousValidation: true,
     positiveValidation: true,
 
