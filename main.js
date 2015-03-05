@@ -34,6 +34,8 @@ if (Meteor.isClient) {
 
 
 
+
+
   
 }
 
@@ -48,6 +50,24 @@ if (Meteor.isServer) {
 
 
 
+
+AccountsTemplates.configure({
+    forbidClientAccountCreation: false,
+    sendVerificationEmail: true,
+    enforceEmailVerification: true,
+    continuousValidation: true,
+    positiveValidation: true,
+
+    // texts: {
+    //     errors: {
+    //         mustBeLoggedIn: "error.accounts.Must be logged in",
+    //         pwdMismatch: "error.pwdsDontMatch",
+    //         restrictCreationByEmailDomain:'gmail.com',
+    //     }
+    // }
+});
+
+Accounts.config({restrictCreationByEmailDomain:'gmail.com'});
 
 
 
