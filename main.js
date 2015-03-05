@@ -32,6 +32,12 @@ if (Meteor.isClient) {
       }
   });
 
+  Template.logout.events({
+    'click #logout' : function() {
+      Meteor.logout();
+    }
+  });
+
 
 
 
@@ -54,7 +60,7 @@ if (Meteor.isServer) {
 AccountsTemplates.configure({
     forbidClientAccountCreation: false,
     sendVerificationEmail: true,
-    enforceEmailVerification: true,
+    // enforceEmailVerification: true,
     continuousValidation: true,
     positiveValidation: true,
 
