@@ -17,6 +17,16 @@ Router.route('/info', function () {
   $("#info").addClass("active");
 });
 
+// Router.configure({
+//  layoutTemplate: 'layout',
+// });
+
+
+// Router.configure({
+//   layoutTemplate: 'layout',
+//    notFoundTemplate: 'notFound',
+//  });
+
 //DB initialization
 WasteItems = new Mongo.Collection("wasteitems");
 var items = WasteItems.find();
