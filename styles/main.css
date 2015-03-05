@@ -57,6 +57,8 @@ input{
 	display: block;
 	visibility: default;
 	color: #58FA58;
+	width: 98%;
+	margin-left: 1%;
 }
 
 /*input[placeholder] {
@@ -141,6 +143,8 @@ button{
 
 .searchRow{
 	margin-top: 0px;
+	width: 98%;
+	margin-left: 1%;
 }
 
 #popupsuccess{
@@ -174,12 +178,16 @@ button{
   .searchbar{
   	max-width: 90vw;
   }
+  .container {
+  	padding-top: 20px;
+  }
 
 }
 
 @media screen and (min-width: 992px) {
 	.searchbar {
 		max-width: 46vw;
+		margin-left: 12%;
 	}
 
 }
