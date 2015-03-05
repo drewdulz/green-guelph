@@ -27,6 +27,7 @@
   border-radius: 50%;
 	width: 80%;
 	display: table;
+	margin: 0;
 }
 
 .category-name {
@@ -86,6 +87,12 @@
 	/*width: 100%;*/
 }
 
+.anchor {
+	position: relative;
+	top: -50px;
+	/*visibility:hidden;*/
+}
+
 
 
 
@@ -99,6 +106,15 @@
 	}
 	.category-name {
 		font-size: 16pt;
+	}
+	.info-title {
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 20px;
+		font-size: 4.5vw;
+	}
+	.category {
+		width: 100%;
 	}
 
 }
