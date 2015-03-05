@@ -86,6 +86,12 @@
 	/*width: 100%;*/
 }
 
+.anchor {
+	position: relative;
+	top: -50px;
+	/*visibility:hidden;*/
+}
+
 
 
 
