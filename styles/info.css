@@ -5,7 +5,7 @@
 .info-super-container {
 	padding-bottom: 50px;
 	overflow: scroll;
-	background-color: rgba(30, 213, 30, 0.88);
+	background-color: #AAE0A6;
 }
 
 .info-title {
@@ -21,25 +21,24 @@
 
 .category {
 	background-position: center;
-	background-size: auto 50%;
+	background-size: auto 75%;
   background-repeat: no-repeat;
-  
-  background-color: rgba(72, 178, 253, 0.78);
-	border-radius: 50%;
+  background-color: red;
+  border-radius: 50%;
 	width: 80%;
+	display: table;
+	margin: 0;
 }
 
 .category-name {
-	color: rgba(246, 247, 246, 1);
-	-webkit-text-stroke-width: 0.5px;
-  	/*-webkit-text-stroke-color: rgba(0,255,0,0.9);*/
+	color: white;
 	font-size: 1.5vw;
-	font-weight: bold;
 	text-align: center;
 	text-transform: uppercase;
-	position: absolute;
-	top: 40%;
+	padding: 10px;
 	width: 69%;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .category-bg-image {
@@ -49,40 +48,37 @@
 
 }
 
-
-
 .photo {
-	background-color: red;
+	color: white;
 	text-align: center;
 	width: 100%;
 	height: 100px;
 	border-style: solid;
   border-width: 5px;
-  color: white;
   border-color: black;
-  border-radius: 5px; 
   font-size: 2vw;
   text-transform: uppercase;
   display: table-cell;
   vertical-align: middle;
   background-position: center;
-	background-size: 20% auto;
+	background-size: 30% auto;
   background-repeat: no-repeat;
-  background-color: rgba(72, 178, 253, 0.78);
-
+  border-radius: 15px;
 }
 
 .info {
 	text-align: center;
-	border-radius: 5px;
-	border-color: black;
+	color: white;
+	font-size: 12pt;
 	width: 100%;
 	height: 100px;
 	border-style: solid;
   border-width: 5px;
+  border-color: black;
   display: table-cell;
   vertical-align: middle;
-  font-weight: bold;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .content-row {
@@ -91,10 +87,34 @@
 	/*width: 100%;*/
 }
 
+.anchor {
+	position: relative;
+	top: -50px;
+	/*visibility:hidden;*/
+}
+
+
+
+
 /*Mobile Devices*/
 @media screen and (max-width: 768px) {
   .content-row {
 		padding: 5px;
+	}
+	.photo {
+		font-size: 16pt;
+	}
+	.category-name {
+		font-size: 16pt;
+	}
+	.info-title {
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 20px;
+		font-size: 4.5vw;
+	}
+	.category {
+		width: 100%;
 	}
 
 }

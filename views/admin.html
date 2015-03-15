@@ -1,13 +1,18 @@
 <template name="admin">
-	{{#if currentUser}}
-	  {{> accountOptions}}
-	  {{> input}}
-	  {{> removeItem}}
-		<br>
-		{{> upload}}
-	{{else}}
-		{{> atForm}}
-	{{/if}}
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 admin-panel">
+			{{#if currentUser}}
+			  {{> input}}
+			  {{> removeItem}}
+				<br>
+				{{> upload}}
+		
+			{{else}}
+				{{> atForm}}
+			{{/if}}
+		</div>
+	</div>
+		
 </template>
 
 
@@ -51,20 +56,6 @@
 	</form>
 
 
-</template>
-
-<template name="login">
-	<form id="login-form" action="action" class="login-form">
-    <div>
-      <input type="email" id="login-email" />
-      <input type="password" id="login-password" />
-      <input type="submit" id="login-button" value="Sign in" />
-   </div>
- </form> 
-</template>
-
-<template name="accountOptions">
-	<button id="logout" class="logout-btn">logout</button>
 </template>
 
 <template name="removeItem">

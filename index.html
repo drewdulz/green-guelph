@@ -1,4 +1,7 @@
 <head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>waste-sorting</title>
 
   <link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
@@ -6,7 +9,7 @@
 	
 <body>
 
-	<!-- Bottom fixed nav bar -->
+	<!-- Top fixed nav bar -->
 	<nav class="navbar navbar-default navbar-fixed-top mynav">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
@@ -23,13 +26,27 @@
 	      <ul class="nav navbar-nav">
 	        <li id="home"><a href="/">Home</a></li>
 	        <li id="info"><a href="/info">More Information</a></li>
-	        <li id="admin"><a href="/admin">Admin</a></li> 
 	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	      	{{#if currentUser}}
+        		<li id="admin"><a href="/admin">Admin Panel</a></li> 
+        		{{> logout}}
+        	{{else}}
+        		<li id="admin"><a href="/admin">Sign in</a></li> 
+	      	{{/if}}
+        </ul>
 	    </div>
 	  </div>
 	</nav>
+
+
 </body>
 
+
+
+<template name="logout">
+	<li id="logout"><a>Logout</a></li> 
+</template>
 
 
 
