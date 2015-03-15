@@ -7,9 +7,6 @@ html, body{
 	font-weight: 300;
 	height:100%;
 	width: 100%;
-
-	/*overflow: scroll;*/
-
 	padding-top: 25px;
 
 	/*background-color: black;*/
@@ -21,7 +18,7 @@ td{
 }
 
 form {
-    width:500px;
+    /*width:500px;*/
     margin:50px auto;
 }
 
@@ -49,6 +46,10 @@ input{
 	height: 20px;
 	width: auto;
 }
+ul.nav a:hover { 
+	color: rgb(38, 150, 20) !important;
+
+}
 
 .glyphicon-leaf{
 	margin-right: 8px;
@@ -65,6 +66,8 @@ input{
 	display: block;
 	visibility: default;
 	color: #58FA58;
+	width: 98%;
+	margin-left: 1%;
 }
 
 /*input[placeholder] {
@@ -91,7 +94,8 @@ input{
 	/*min-width: 10em;*/
 	/*height: 100%;*/
 	/*font-size: 150%;*/
-	color: rgba(100, 144, 163, 1);
+	/*color: rgba(100, 144, 163, 1);*/
+	color: black;
 	/*margin-left: 80px;*/
 
 	padding:8px 15px;
@@ -125,8 +129,9 @@ input{
 	background-size: cover;
 	background-position: center;
 	padding-top: 150px;
-	overflow: scroll;
+	overflow: hidden;
 	padding-bottom: 70px;
+
 }
 .center{
 	text-align: center;
@@ -149,6 +154,8 @@ button{
 
 .searchRow{
 	margin-top: 0px;
+	width: 98%;
+	margin-left: 1%;
 }
 
 #popupsuccess{
@@ -196,6 +203,23 @@ button{
 	.container-fluid {
 		padding-left: 10%;
 		padding-right: 10%;
+
+
+/*@media screen and (max-width: 768px) {
+  
+  .searchbar{
+  	max-width: 90vw;
+  }
+  .container {
+  	padding-top: 20px;
+  }
+
+}*/
+
+/*@media screen and (min-width: 992px) {
+	.searchbar {
+		max-width: 46vw;
+		margin-left: 12%;
 	}
 
-}
+}*/

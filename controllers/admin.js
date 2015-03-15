@@ -41,11 +41,11 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.accountOptions.events({
-    'click #logout' : function() {
-      Meteor.logout();
-    }
-  });
+  // Template.accountOptions.events({
+  //   'click #logout' : function() {
+  //     Meteor.logout();
+  //   }
+  // });
 
   Template.removeItem.events({
     'click #remove': function () {
@@ -53,6 +53,8 @@ if (Meteor.isClient) {
       alert("item removed");
     }
   });
+
+ 
 
 
 }

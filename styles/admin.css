@@ -20,3 +20,19 @@
 	text-align: center;
 	width: 50%;
 }
+
+form {
+	margin-top: 30px !important;
+}
+
+.at-form {
+	width: 90%;
+}
+
+
+/*Mobile Devices*/
+@media screen and (max-width: 768px) {
+	.admin-panel {
+		padding: 0 40px 0 40px;
+	}
+}
