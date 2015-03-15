@@ -80,8 +80,19 @@ if (Meteor.isClient) {
 
   Template.infoCategories.rendered = function(){
   	Session.set("info", info);
- 
 	};
+
+
+	// Template.infoCategories.events({
+ //    //Smooth Scrolling on anchor link clicks
+ //    'click a' : function(e) {
+ //    	e.preventDefault();
+ //      $('html, body').animate({
+ //        scrollTop: $( $.attr('a', 'href') ).offset().top
+	//     }, 500);
+	//     return false;
+ //    }
+ //  });
 
 	Template.info.rendered = function() {
 		Session.set("info", info);
