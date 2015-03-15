@@ -91,16 +91,12 @@ ul.nav a:hover {
 
 .searchbar{
 	border-radius: 8px;
-	/*min-width: 10em;*/
-	/*height: 100%;*/
-	/*font-size: 150%;*/
-	/*color: rgba(100, 144, 163, 1);*/
+	width: 100%;
 	color: black;
-	/*margin-left: 80px;*/
 
 	padding:8px 15px;
-    background-color: rgba(0, 255, 0, 0.3);
-    border:0px solid #dbdbdb;
+  background-color: rgba(0, 255, 0, 0.3);
+  border:0px solid #dbdbdb;
 }
 
 #button{
@@ -185,16 +181,10 @@ button{
 }
 
 /*Mobile Devices*/
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
 	.searchbar {
-		width: 100%;
-		margin: 0px;
-	}
-}
-
-@media screen and (max-width: 545px) {
-	.searchbar {
-		width: 350px;
+		width: 80%;
+		margin-left: 10%;
 	}
 }
 
@@ -203,7 +193,12 @@ button{
 	.container-fluid {
 		padding-left: 10%;
 		padding-right: 10%;
-
+	}
+	.searchbar {
+		width: 70%;
+		margin-left: 15%;
+	}
+}
 
 /*@media screen and (max-width: 768px) {
   
@@ -221,5 +216,4 @@ button{
 		max-width: 46vw;
 		margin-left: 12%;
 	}
-
 }*/
