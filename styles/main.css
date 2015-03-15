@@ -130,6 +130,7 @@ input{
 }
 .center{
 	text-align: center;
+	/*margin: 0px;*/
 }
 
 .white{
@@ -174,4 +175,27 @@ button{
 
 .white-text {
 	color: white;
+}
+
+/*Mobile Devices*/
+@media screen and (max-width: 768px) {
+	.searchbar {
+		width: 100%;
+		margin: 0px;
+	}
+}
+
+@media screen and (max-width: 545px) {
+	.searchbar {
+		width: 350px;
+	}
+}
+
+/*Larger Screens*/
+@media screen and (min-width: 992px) {
+	.container-fluid {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
 }
